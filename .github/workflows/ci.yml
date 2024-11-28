@@ -5,14 +5,14 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2 # Step to check out the code
     - name: Set up Python
       uses: actions/setup-python@v2 # Step to set up Python on Window
       with:
-        python-version: '3.x' # Specify the Python version (e.g., 3.8, 3.9)
+        python-version: '3.12' # Specify the Python version (e.g., 3.8, 3.9)
 
     - name: Install dependencies  # Install dependencies
       run: |
